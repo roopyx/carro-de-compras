@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import Productos from './componentes/Productos'
 
 class App extends Component {
 
@@ -39,7 +40,10 @@ class App extends Component {
     const { esCarroVisible } = this.state
     return (
       <div>
-        
+        <Productos
+          agregarAlCarro={this.agregarAlCarro}
+          productos={this.state.productos} 
+        />
       </div>
     )
   }
